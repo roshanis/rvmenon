@@ -23,5 +23,5 @@ Deployed on Vercel: framework preset Other, no build command, output directory t
 
 ## Before launch
 
-- `assets/novel-cover.jpg` is a stand-in composed from the novel's cover art. Replace it with the cover shown on Amazon (same file name, 800 x 1280 or any 5:8 image).
+- `assets/novel-cover.jpg` is the novel's ebook cover (`images/cover.jpg` in roshanis/nagoji), square, shown with class `sq`.
 - The graphic novel byline says RV Menon (matching its cover art). The Amazon listing URL suggests it credits Roshan Venugopal; make the two match.
