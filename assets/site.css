@@ -109,3 +109,4 @@ footer a{color:var(--paper-dim)}
 @media (max-width:860px){.feature{grid-template-columns:1fr;gap:36px}.feature .covers{justify-content:center}}
 .hero .wrap.solo{grid-template-columns:1fr}
 .nowrap{white-space:nowrap}
+.covers img.sq,.book .cover img.sq{aspect-ratio:1/1}
