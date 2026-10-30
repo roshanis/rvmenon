@@ -8,6 +8,7 @@ It is a static site with no build step, served at https://rvmenon.com. Shared st
 | --- | --- |
 | `index.html` | Author home page |
 | `horse-of-the-servant/index.html` | Book page: both editions with Amazon links, the world of the book, the atlas, the author |
+| `sitemap.xml`, `robots.txt` | For search engines; update `lastmod` when a page changes |
 | `assets/` | `site.css`, covers, the Malabar map illustration and the social preview image |
 | `horse-of-the-servant/atlas/index.html` | A copy of the Travancore 1671 to 1758 reading atlas. Its source and build script live in [roshanis/horse](https://github.com/roshanis/horse); rebuild there and copy the built `index.html` here. |
 
