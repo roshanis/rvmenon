@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Horse of the Servant | RV Menon</title>
+<meta name="description" content="Horse of the Servant, a historical novel of 18th-century Goa, Travancore and the Battle of Colachel, and its graphic novel edition.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Horse of the Servant">
+<meta property="og:description" content="A Maratha horseman, shipwrecked on the pepper coast in 1738, rides into the war that breaks the Dutch at Colachel.">
+<meta property="og:image" content="https://roshanis.github.io/rvmenon/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0e0a08; --ink-2:#17110d; --ink-3:#221a14;
+  --paper:#f2e8d4; --paper-dim:#cbbd9f; --muted:#9a8b72;
+  --gold:#c9a25e; --gold-bright:#e0bb76; --red:#9c2f22;
+  --line:rgba(201,162,94,.28);
+  --serif:"EB Garamond",Georgia,"Times New Roman",serif;
+  --display:"Cinzel","Trajan Pro",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--paper);font:400 1.1875rem/1.6 var(--serif);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--gold-bright)}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.eyebrow{font:500 .8rem/1.2 var(--display);letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.1;margin:0;color:var(--paper)}
+h2{font-size:clamp(1.6rem,3.4vw,2.2rem);letter-spacing:.02em}
+h3{font-size:clamp(1.5rem,3vw,1.9rem)}
+p{margin:0 0 1em}
+.rule{width:64px;height:1px;background:var(--gold);border:0;margin:18px 0 26px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:5;background:rgba(14,10,8,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px}
+.brand{font:700 .95rem/1 var(--display);letter-spacing:.12em;color:var(--paper);text-decoration:none;white-space:nowrap}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+.nav ul a{font:500 .78rem/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--paper-dim);text-decoration:none}
+.nav ul a:hover{color:var(--gold-bright)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);
+  background:radial-gradient(ellipse at 70% 40%,rgba(156,47,34,.22),transparent 60%),linear-gradient(180deg,var(--ink-2),var(--ink))}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:80px}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);letter-spacing:.03em;margin:14px 0 8px}
+.hero .series{font:500 1.05rem/1.4 var(--display);letter-spacing:.1em;color:var(--paper-dim)}
+.hero .hook{font-size:clamp(1.25rem,2.4vw,1.5rem);font-style:italic;color:var(--paper);max-width:32ch;margin:26px 0 32px}
+.covers{display:flex;justify-content:center;align-items:flex-end;gap:0;min-height:320px}
+.covers img{width:min(46%,230px);aspect-ratio:5/8;object-fit:cover;border-radius:3px;box-shadow:0 22px 50px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.06)}
+.covers img:first-child{transform:rotate(-4deg) translateX(14px);z-index:1}
+.covers img:last-child{transform:rotate(4deg) translate(-14px,-18px);z-index:2}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border-radius:2px;
+  font:700 .8rem/1.35 var(--display);letter-spacing:.14em;text-transform:uppercase;text-align:center;text-decoration:none;transition:background .15s,color .15s}
+.btn.primary{background:var(--gold);color:var(--ink)}
+.btn.primary:hover{background:var(--gold-bright)}
+.btn.ghost{border:1px solid var(--gold);color:var(--gold-bright)}
+.btn.ghost:hover{background:rgba(201,162,94,.12)}
+
+/* sections */
+section{padding:84px 0;border-bottom:1px solid var(--line)}
+.lead{color:var(--paper-dim);max-width:60ch}
+
+/* books */
+.book{display:grid;grid-template-columns:300px 1fr;gap:52px;align-items:start;margin-top:56px}
+.book + .book{padding-top:56px;border-top:1px solid var(--line)}
+.book .cover img{width:100%;aspect-ratio:5/8;object-fit:cover;border-radius:3px;box-shadow:0 18px 40px rgba(0,0,0,.6)}
+.book .by{font-style:italic;color:var(--paper-dim);margin:8px 0 4px;font-size:1.15rem}
+.book .meta{font:500 .8rem/1.4 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 22px}
+.book .blurb p{max-width:62ch}
+.book .blurb p:first-child{font-size:1.28rem;color:var(--paper)}
+.note{font-size:1rem;color:var(--muted);font-style:italic;margin-top:4px}
+.book .btns{margin-top:26px}
+
+/* world */
+.world{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px}
+.place{border-top:2px solid var(--red);padding-top:18px}
+.place .when{font:700 1.5rem/1 var(--display);color:var(--gold)}
+.place h3{font-size:1.05rem;letter-spacing:.12em;text-transform:uppercase;margin:10px 0 10px;color:var(--paper)}
+.place p{color:var(--paper-dim);font-size:1.08rem}
+
+/* atlas */
+.atlas{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+.atlas img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:3px;filter:sepia(.15);box-shadow:0 18px 40px rgba(0,0,0,.55)}
+.atlas ul{padding-left:1.1em;color:var(--paper-dim);margin:0 0 28px}
+.atlas li{margin-bottom:6px}
+
+/* author */
+.author .wrap{max-width:760px}
+.author p{color:var(--paper-dim)}
+
+footer{padding:40px 0 56px;color:var(--muted);font-size:.98rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer a{color:var(--paper-dim)}
+
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;gap:40px;padding-top:48px;padding-bottom:56px}
+  .covers{min-height:0;order:-1}
+  .book{grid-template-columns:1fr;gap:28px}
+  .book .cover{max-width:260px}
+  .world{grid-template-columns:1fr;gap:32px}
+  .atlas{grid-template-columns:1fr;gap:32px}
+  section{padding:64px 0}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  .nav ul{gap:14px}
+  .hide-sm{display:none}
+  .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">RV Menon</a>
+    <ul>
+      <li><a href="#books">Books</a></li>
+      <li class="hide-sm"><a href="#world">The world</a></li>
+      <li><a href="#atlas">Atlas</a></li>
+      <li class="hide-sm"><a href="#author">Author</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow"><span class="hide-sm">Historical fiction · </span>18th-century India</div>
+      <h1>Horse of the Servant</h1>
+      <div class="series">Blood and Thrones · Book One</div>
+      <p class="hook">A Maratha horseman, shipwrecked on the pepper coast in 1738, rides into the war that breaks the Dutch at Colachel.</p>
+      <div class="btns">
+        <a class="btn primary" href="#novel">The novel</a>
+        <a class="btn ghost" href="#graphic-novel">The graphic novel</a>
+      </div>
+    </div>
+    <div class="covers" aria-hidden="true">
+      <img src="assets/novel-cover.jpg" alt="" width="800" height="1280">
+      <img src="assets/graphic-novel-cover.jpg" alt="" width="800" height="1280">
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="books" aria-labelledby="books-h">
+  <div class="wrap">
+    <div class="eyebrow">The books</div>
+    <h2 id="books-h">One story, two forms</h2>
+    <hr class="rule">
+    <p class="lead">Read Nagoji's story as a novel, or follow it in pictures in the full-colour graphic novel.</p>
+
+    <article class="book" id="novel" aria-labelledby="novel-h">
+      <div class="cover"><img src="assets/novel-cover.jpg" alt="Cover of Horse of the Servant, a novel by RV Menon" width="800" height="1280" loading="lazy"></div>
+      <div>
+        <div class="eyebrow">The novel</div>
+        <h3 id="novel-h">Horse of the Servant</h3>
+        <p class="by">by RV Menon</p>
+        <p class="meta">Blood and Thrones · Book One</p>
+        <div class="blurb">
+          <p>Goa, 1738. Nagoji Sawant, a Maratha cavalry officer, is broken in a Portuguese dungeon and shipped south in chains. A monsoon storm tears the slave ship apart. He lives, and washes up on the pepper coast with nothing but what he knows of horses and European war.</p>
+          <p>That knowledge makes him useful. In Travancore, King Marthanda Varma is crushing the old noble houses and forging a single state, and the Dutch East India Company means to stop him. Nagoji is set to train horsemen for a war the kingdom cannot afford to lose, and in 1741 that war comes to the beach at Colachel.</p>
+          <p>A stranger who came ashore as wreckage must decide whether he is a guest, a weapon, or a servant.</p>
+        </div>
+        <div class="btns">
+          <a class="btn primary" href="https://www.amazon.com/dp/B0GD5K3GWF" rel="noopener" aria-label="Buy the novel on Amazon">Buy on Amazon</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="book" id="graphic-novel" aria-labelledby="gn-h">
+      <div class="cover"><img src="assets/graphic-novel-cover.jpg" alt="Cover of Horse of the Servant: A Graphic Novel, showing two horsemen charging into battle" width="800" height="1280" loading="lazy"></div>
+      <div>
+        <div class="eyebrow">The graphic novel</div>
+        <h3 id="gn-h">Horse of the Servant: A Graphic Novel</h3>
+        <p class="by">by RV Menon</p>
+        <p class="meta">Full colour · 422 pages · 28 chapters</p>
+        <div class="blurb">
+          <p>In a Portuguese cellar under Goa, the first thing they take is his name. A shrug, and an entry in a book.</p>
+          <p>The story of the novel, told in full colour: the dungeon and the storm, the pepper coast, the court of Marthanda Varma, the beach at Colachel, and what follows, when old houses draw long knives, letters from the north call Nagoji home, and he must choose whose man he is.</p>
+          <p class="note">For adult readers. The book shows torture and battle.</p>
+        </div>
+        <div class="btns">
+          <a class="btn primary" href="https://www.amazon.com/dp/B0HP4CW4CW" rel="noopener" aria-label="Buy the graphic novel on Amazon">Buy on Amazon</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="world" aria-labelledby="world-h">
+  <div class="wrap">
+    <div class="eyebrow">The world of the book</div>
+    <h2 id="world-h">From a Goa cell to a southern beach</h2>
+    <hr class="rule">
+    <div class="world">
+      <div class="place">
+        <div class="when">1738</div>
+        <h3>Goa</h3>
+        <p>A Maratha cavalryman, captured by the Portuguese, is questioned in a cell under the city and shipped south in chains.</p>
+      </div>
+      <div class="place">
+        <div class="when">1738 to 1741</div>
+        <h3>The pepper coast</h3>
+        <p>In Travancore, King Marthanda Varma and his minister Ramayyan break the old noble houses, while the Dutch East India Company moves to hold the pepper trade.</p>
+      </div>
+      <div class="place">
+        <div class="when">1741</div>
+        <h3>Colachel</h3>
+        <p>On a beach in the far south, the army of an Indian king meets the soldiers of a European company.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="atlas" aria-labelledby="atlas-h">
+  <div class="wrap atlas">
+    <div>
+      <div class="eyebrow">Research for the novel</div>
+      <h2 id="atlas-h">Travancore, 1671 to 1758: a reading atlas</h2>
+      <hr class="rule">
+      <p class="lead">An interactive map and timeline built from the historian Mark de Lannoy's 1997 study, <cite>The Kulasekhara Perumals of Travancore</cite>, made as research for the novel.</p>
+      <ul>
+        <li>260 dated events, each with its page in de Lannoy's study</li>
+        <li>Who held each principality, year by year</li>
+        <li>The 1741 siege of Colachel on the real coast</li>
+        <li>The royal houses, 36 people and key terms</li>
+      </ul>
+      <a class="btn ghost" href="atlas/">Open the atlas</a>
+    </div>
+    <img src="assets/malabar-map.jpg" alt="An old-style illustrated map of the Malabar coast, from Goa south to Travancore" width="800" height="800" loading="lazy">
+  </div>
+</section>
+
+<section class="author" id="author" aria-labelledby="author-h">
+  <div class="wrap">
+    <div class="eyebrow">About the author</div>
+    <h2 id="author-h">RV Menon</h2>
+    <hr class="rule">
+    <p>RV Menon is a software engineer who grew up between Kerala and Maharashtra, two lands whose histories intertwine in this novel. The stories in these pages draw from memories shared by his father, grandparents, uncles, aunts, mother-in-law, and wife, woven together with historical research into a narrative that honours both family lore and the documented past.</p>
+    <p><em>Horse of the Servant</em> is his first novel.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Horse of the Servant · Blood and Thrones</span>
+    <span><a href="https://www.amazon.com/dp/B0GD5K3GWF" rel="noopener">Novel on Amazon</a> · <a href="https://www.amazon.com/dp/B0HP4CW4CW" rel="noopener">Graphic novel on Amazon</a> · <a href="atlas/">Atlas</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
