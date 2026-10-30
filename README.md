@@ -21,7 +21,7 @@ Deployed on Vercel: framework preset Other, no build command, output directory t
 - `/horse-of-the-servant/`: the book page, both editions
 - `/horse-of-the-servant/atlas/`: the reading atlas
 
-## Before launch
+## Images
 
-- `assets/novel-cover.jpg` is the novel's image of the king on his throne (`images/portrait_marthanda.jpg` in roshanis/nagoji), square, shown with class `sq`.
-- The graphic novel byline says RV Menon (matching its cover art). The Amazon listing URL suggests it credits Roshan Venugopal; make the two match.
+- `assets/novel-cover.jpg`: the seated king from the novel (`images/portrait_marthanda.jpg` in roshanis/nagoji), square, shown with class `sq`.
+- `assets/graphic-novel-cover.jpg`: the graphic novel's Kindle cover. Both books are credited to RV Menon.
