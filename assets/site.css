@@ -127,18 +127,4 @@ footer a{color:var(--paper-dim)}
 .kp-text h2{margin:0 0 24px}
 .kp-text h3{font-size:1.2rem;letter-spacing:.03em;margin:2em 0 .8em;color:var(--gold-bright)}
 .kp-text p{text-align:left;hyphens:auto}
-.kp-text [id]{scroll-margin-top:72px}
-.kp-part{padding:0 0 56px;margin:0 0 56px;border-bottom:1px solid var(--line)}
-.kp-part:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
-.kp-part h2{font-size:clamp(1.5rem,3.2vw,2rem);margin:0 0 28px}
-.pb{font-size:.72em;color:var(--muted)}
-.unc{border-bottom:1px dotted var(--paper-dim)}
-a.fnref{font-size:.72em;vertical-align:super;line-height:0;text-decoration:none;padding:0 .1em}
-.notes{margin-top:2.4em;padding-top:1.2em;border-top:1px solid var(--line);font-size:1rem;color:var(--paper-dim)}
-.notes h3{margin-top:0}
-.notes .kp-note p{margin:.5em 0}
-.notes a{text-decoration:none}
-.kp-note:target{background:rgba(201,162,94,.12)}
-.totop{font:500 .75rem/1 var(--display);letter-spacing:.14em;text-transform:uppercase;margin-top:2em}
-.totop a{text-decoration:none}
 .covers.kp-home img{transform:none;width:min(60%,240px)}
